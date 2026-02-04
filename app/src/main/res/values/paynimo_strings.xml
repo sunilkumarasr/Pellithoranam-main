@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- AlertDialog connection Error -->
+    <!-- Loader text -->
+    <!-- Font Style Path -->
+    <!-- REQUESTED_PAYMENT_MODE -->
+
+    <!-- PAYMENT MODES -->
+
+    <!-- Card -->
+
+
+    <!-- <string name="paynimo_cc_btn_paywith_otp_label">Pay using OTP</string> -->
+
+    <!-- IMPS -->
+
+    <!-- EMANDATE_MODE -->
+
+    <!-- WebView -->
+
+    <!-- UPI -->
+
+    <!-- mVisa -->
+
+    <!-- Digital Mandate -->
+
+    <!-- OTP READ -->
+
+    <!-- Custom Dialog -->
+
+    <!-- Back Press Dialog -->
+
+    <!-- WEBSERVICE Errors -->
+
+    <!-- Validation Error Messages -->
+
+    <!-- Card Regex -->
+
+    <!-- Event Logging -->
+
+</resources>

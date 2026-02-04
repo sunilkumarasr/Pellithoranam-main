@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#01a652</color>
+    <color name="colorPrimary">#72AB3A</color>
+    <color name="purple_700">#96D755</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="notification_bar_color_two">#EAFBFF</color>
+
+    <color name="notification_bar_color">#97ECFF</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="dark_grey">#676767</color>
+    <color name="grey">#898A8D</color>
+    <color name="heading_text">#898A8D</color>
+    <color name="text_color">#1F1F1F</color>
+    <color name="blue_text">#2A3E93</color>
+    <color name="blue_inner_text">#29479A</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="blue_text_color">@color/colorPrimary</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_2">#1E0D0C0C</color>
+    <color name="heilet_color">#DD3562</color>
+    <color name="red">#D42127</color>
+    <color name="app_red">@color/colorPrimary</color>
+    <color name="green">#3CB371</color>
+    <color name="color_donthave">#344054</color>
+    <color name="color_register_now">#F3721E</color>
+    <color name="otp_bg_color">#F7F8F9</color>
+    <color name="otp_dull_color">#8F9298</color>
+    <color name="otp_number_color">#344054</color>
+
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.stranger_sparks.view.activities.ui.fragments.curved_menu.BlankBottomSheetViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_curved_menu_blue_gradiant"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"                
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_account"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="Account"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DFD2F3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tvLikesLiked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_likes_liked"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="@string/likes_liked"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DFD2F3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tvNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_notification"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="@string/notifications"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DFD2F3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+            <TextView
+                android:id="@+id/tvManageSubscriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_vip"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="@string/manage_subcription"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DFD2F3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+
+            <TextView
+                android:id="@+id/tvPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_payment"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="@string/payments"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+ <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DFD2F3"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+
+            <TextView
+                android:id="@+id/tvWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_menu_walet"
+                android:drawablePadding="@dimen/_20sdp"
+                android:fontFamily="@font/muli_extrabold"
+                android:gravity="left|top"
+                android:text="@string/menu_title_walet"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+</layout>
+
+

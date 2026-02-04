@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activities.ui.activities.manage_subcription.VideoSubscriptionFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.stranger_sparks.view.activities.ui.activities.manage_subcription.ManageSubscriptionViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignParentBottom="true"
+           android:scaleType="centerCrop"
+           android:src="@drawable/ic_app_background"
+           />-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_app_background"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/llCustomToolBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/llDataFound"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvNotificationContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvNotificationHeader"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_14sdp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Current Plan"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Plan Features"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlanFeatures"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Plan Price"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvCurrentPlanPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Status"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+
+                                />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tvPlanStatud"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Consumed Duration"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvNoOfProfiles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="left|top"
+                                android:text="Available Duration"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_17sdp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvAvableProfiles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/mulish_regular"
+                                android:gravity="left|top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llSubScription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="left|top"
+                                    android:text="*Currently you don't have active Plan if you want Please subscribe to active."
+                                    android:textColor="@color/red"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/subscription"
+                                    android:gravity="start"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="20dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/benefits_includes"
+                                    android:gravity="start"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:textColor="@color/blue_text_color"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/all_location"
+                                    android:gravity="start"
+                                    android:drawableStart="@drawable/ic_location_pink"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:drawablePadding="10dp"
+                                    android:visibility="gone"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="10dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/mulish_regular"
+                                    android:text="Connect Through any of our 97 locations."
+                                    android:gravity="start"
+                                    android:visibility="gone"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:drawablePadding="10dp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginStart="@dimen/_30sdp"/>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rcvSubscriptionPackages"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <Button
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/btnGetStarted"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.7"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/btn_curved_blue_gradiant"
+                                        android:text="@string/get_started"
+                                        android:textSize="@dimen/_14sdp"
+                                        android:textColor="@android:color/white"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginEnd="@dimen/_20sdp"
+                                        android:fontFamily="@font/poppins_medium"
+                                        />
+
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/llSubscriptionStatusPage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_thankyou"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Subscription Details"
+                                android:textColor="@color/colorPrimary"
+                                android:gravity="center_horizontal"
+                                android:textSize="20sp"
+                                android:layout_marginTop="20dp"/>
+
+                            <TextView
+                                android:id="@+id/txtSubPlanDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/subscription"
+                                android:gravity="center_horizontal"
+                                android:textSize="20sp"
+                                android:textColor="#000000"
+                                android:layout_marginTop="20dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <Button
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/btnContinue"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_curved_blue_gradiant"
+                                    android:text="@string/continue_tag"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textColor="@android:color/white"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginEnd="@dimen/_20sdp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    />
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</layout>

@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("https://www.jitpack.io") }
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://storage.zego.im/maven' }
+
+
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("https://www.jitpack.io") }
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://storage.zego.im/maven' }
+
+    }
+}
+rootProject.name = "Pellithoranam"
+include ':app'

@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">Pellithoranam</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="success">Success!</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="do_you_forget_your_password">Do You forgot your password?</string>
+    <string name="reset_here">Reset here</string>
+    <string name="sing_up">Sing Up</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="plus_91">+91</string>
+    <string name="enter_code">Verification Code</string>
+    <string name="upload_profile">Upload Profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="location">Location</string>
+    <string name="email_id">Email Id</string>
+    <string name="english">English</string>
+    <string name="telugu">Telugu</string>
+    <string name="hindi">Hindi</string>
+    <string name="height">Height</string>
+    <string name="continue_tag">Continue</string>
+    <string name="upload_picture">Upload Picture</string>
+    <string name="subscription">Subscription</string>
+    <string name="get_started">Get Started</string>
+    <string name="benefits_includes">Benefits includes</string>
+    <string name="benefits_includes_text">Choose our premium packages and unlock a world of possibilities. Find your perfect match faster with exclusive features!</string>
+    <string name="all_location">All Location</string>
+    <string name="for_tag">for</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="menu_title_home">Home</string>
+    <string name="menu_title_my_account">My Account</string>
+    <string name="menu_title_settings">Settings</string>
+    <string name="menu_title_walet">Wallet</string>
+    <string name="menu_title_help">Help</string>
+    <string name="likes_liked"><![CDATA["Likes & Liked "]]></string>
+    <string name="manage_subcription">Manage Subscriptions</string>
+    <string name="message_options">Message Options</string>
+    <string name="manage_matches">Manage Matches</string>
+    <string name="privacy_options">Privacy Options</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="read_terms_conditions"><![CDATA[Read and Accept Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="subject">Subject</string>
+    <string name="comment">Comment</string>
+    <string name="submit">Submit</string>
+    <string name="transactions">Transactions</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="ruppe">\u20B9</string>
+    <string name="reason">Reason</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="confirm_account_number">Confirm Account Number</string>
+    <string name="account_number">Account Number</string>
+    <string name="branch">Branch</string>
+    <string name="all">All</string>
+    <string name="completed">Completed</string>
+    <string name="date">Date</string>
+    <string name="payment_source">Payment Source</string>
+    <string name="amount">Amount</string>
+    <string name="status">Status</string>
+    <string name="you_liked">You Liked</string>
+    <string name="liked_you">Liked You</string>
+    <string name="views">Views</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="languages">Languages</string>
+    <string name="single">Single</string>
+    <string name="marriage">Married</string>
+    <string name="about_us">About Us</string>
+    <string name="sign_out">Sign out</string>
+    <string name="faq">Faqs</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="no_data">No Records Found</string>
+    <string name="gallery_images">Gallery Images</string>
+    <string name="skip"><![CDATA[Skip>>]]></string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="payments">Payments</string>
+    <string name="menu_title_profiles">Profiles</string>
+    <string name="no_records_found_criteria">No records found for the search criteria entered</string>
+    <string name="selecte_dob">Select Date of Birth</string>
+    <string name="bio">Bio</string>
+    <string name="send">Send</string>
+    <string name="goto_settings">Go Settings</string>
+    <string name="txt_error_post_notification">Error Notification</string>
+    <string name="image_sizes">Image size > 480×800, 640×1136, 720×1280, 750×1334, 1080×1920, and 1440×2560</string>
+    <string name="no_profiles">No data available with your profile. Add People from Profiles page who are matching your profile</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="login_to_access_your_account">Log in to access your account</string>
+    <string name="dont_have_account">Don’t have an account?  </string>
+    <string name="register_now"> Register Now</string>
+    <string name="we_have_sent_otp">We have sent the verification code to your phone number</string>
+    <string name="verify">Verify</string>
+    <string name="dont_get_otp">Didn’t get OTP Code? </string>
+    <string name="resend">  Resend Code</string>
+    <string name="family_name">Family Name</string>
+    <string name="father_name">Father Name</string>
+    <string name="weight">Weight</string>
+    <string name="profession">Profession</string>
+    <string name="religion">Religion</string>
+    <string name="education">Education</string>
+    <string name="company_name">Working Company</string>
+    <string name="working_position">Disignation</string>
+    <string name="salary_per_month">Month Salary</string>
+    <string name="search_for_profile">Search for Profile</string>
+    <string name="filters">Choose Filters</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="looking_for">I\'m Looking for</string>
+    <string name="apply_filter">Apply</string>
+    <string name="professional_summary">Professional Summary</string>
+    <string name="caste">Caste</string>
+    <string name="enter_birth_star">Birth Star</string>
+    <string-array name="bankTypes">
+        <item>Select Bank Type</item>
+        <item>State Bank of India</item>
+        <item>Punjab National Bank</item>
+        <item>Bank of Baroda</item>
+        <item>Canara Bank</item>
+        <item>Union Bank of India</item>
+        <item>Bank of India</item>
+        <item>Indian Bank</item>
+        <item>Central Bank of India</item>
+        <item>Indian Overseas Bank</item>
+        <item>UCO Bank</item>
+        <item>Bank of Maharashtra</item>
+        <item>Punjab \u0026 Sindh Bank</item>
+    </string-array>
+
+
+</resources>

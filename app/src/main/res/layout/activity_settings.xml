@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.stranger_sparks.view.activities.ui.activities.settings.SettingsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <!-- <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignParentBottom="true"
+           android:scaleType="centerCrop"
+           android:src="@drawable/ic_app_background"
+           />-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_app_background"
+            />
+        <LinearLayout
+            android:id="@+id/llCustomToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_back_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_logout"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llCustomToolBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="left|top"
+                    android:text="Settings"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_17sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvNotificationContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNotificationHeader"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="left|top"
+                    android:text="Manage your settings here"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_account"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="Account"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/tvCallHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_call"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="Call History"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/tvLikeLiked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_likes_liked"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/likes_liked"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_notification"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="Notifications"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvManageSubscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_vip"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/manage_subcription"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_payment"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/payments"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <TextView
+                    android:id="@+id/tvWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_menu_walet"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/menu_title_walet"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_message"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/message_options"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_manage_matches"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/manage_matches"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_privacy"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/privacy_options"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSignOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_power_off"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/sign_out"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DFD2F3"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/tvAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_safty"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/about_us"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <TextView
+                    android:id="@+id/tvFaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_faq"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/faq"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <TextView
+                    android:id="@+id/tvHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_help_center"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/menu_title_help"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <TextView
+                    android:id="@+id/tvTerms_Constions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_terms_and_conditions"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/terms_conditions"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+                <TextView
+                    android:id="@+id/tvPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_privacy_policy"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:text="@string/privacy_policy"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>
+
+

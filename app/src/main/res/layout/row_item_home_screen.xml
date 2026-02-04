@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    android:layout_margin="@dimen/_10sdp"
+    >
+
+    <LinearLayout
+        android:id="@+id/card_item_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_item_topGallery"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:lines="1"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7sdp"
+                android:gravity="end"
+                android:layout_alignParentEnd="true"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:layout_marginEnd="@dimen/_10sdp"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="Belle Benson, 28"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/otp_number_color"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/tvAge_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/otp_dull_color"
+                android:textSize="@dimen/_9sdp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/tvAge_year">
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/otp_dull_color"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="@string/location"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/tvImagesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/otp_dull_color"
+                    android:textSize="@dimen/_9sdp"
+                    android:layout_gravity="end"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="@dimen/_1sdp"
+                    android:layout_alignParentEnd="true"
+                    app:drawableStartCompat="@drawable/ic_camera" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+    <!--
+    </layout>-->

@@ -1,0 +1,184 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'org.jetbrains.kotlin.plugin.compose' version '2.2.21'
+}
+
+android {
+    namespace 'com.stranger_sparks'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.pellithoranam"
+        minSdk 24
+        targetSdk 36
+        versionCode 9
+        versionName "1.0.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    android {
+        packaging {
+            resources {
+                excludes += "META-INF/versions/9/**"
+                excludes += "META-INF/versions/9/OSGI-INF/**"
+            }
+        }
+    }
+
+//    playstore details
+//    password: royalit@123
+//    alias:stranger_spark
+
+    buildTypes {
+        release {
+            debug {
+                def url = "https://pellithoranam.com/admin/"
+                buildConfigField("String", "BASE_URL", "\"${url}api/\"")
+                buildConfigField("String", "SITE_KEY", "\"6LfeatkZAAAAAGvIlFzEIYWnFwRsYv9_IwnoC0Vh\"")
+                buildConfigField("String", "API_URL", "\"${url}\"")
+                buildConfigField("String", "IMG_URL", "\"${url}uploads/\"")
+                buildConfigField("String", "PRIVACY_POLCY", "\"${url}api/privacy_policy\"")
+                buildConfigField("String", "ABOUT_US", "\"${url}api/about_us\"")
+                buildConfigField("String", "TERMS_CONDITIONS", "\"${url}api/term_and_conditions\"")
+                buildConfigField("String", "FAQ", "\"${url}api/faq\"")
+                buildConfigField('boolean', 'HTTP_LOG', 'false')
+            }
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+                def url = "https://pellithoranam.com/admin/"
+                buildConfigField("String", "BASE_URL", "\"${url}api/\"")
+                buildConfigField("String", "SITE_KEY", "\"6LfeatkZAAAAAGvIlFzEIYWnFwRsYv9_IwnoC0Vh\"")
+                buildConfigField("String", "API_URL", "\"${url}\"")
+                buildConfigField("String", "IMG_URL", "\"${url}uploads/\"")
+                buildConfigField("String", "PRIVACY_POLCY", "\"${url}api/privacy_policy\"")
+                buildConfigField("String", "ABOUT_US", "\"${url}api/about_us\"")
+                buildConfigField("String", "TERMS_CONDITIONS", "\"${url}api/term_and_conditions\"")
+                buildConfigField("String", "FAQ", "\"${url}api/faq\"")
+                buildConfigField('boolean', 'HTTP_LOG', 'false')
+            }
+        }
+
+    }
+
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    dataBinding {
+        android.buildFeatures.dataBinding = true
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig = true
+        compose true
+    }
+    kapt {
+        generateStubs = true
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.9.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.9.6'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.activity:activity-compose:1.12.1'
+    implementation platform('androidx.compose:compose-bom:2025.12.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.camera:camera-core:1.5.2'
+    implementation 'androidx.activity:activity-ktx:1.12.1'
+    implementation 'androidx.activity:activity:1.12.2'
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    androidTestImplementation platform('androidx.compose:compose-bom:2025.12.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation 'com.karumi:dexter:6.2.3'
+
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    // dependency for maintaining views and text sizes same across various screen sizes and dimensions
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+    // New version
+
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2-ktx'
+    implementation 'com.mikhaellopez:circularimageview:4.3.1'
+
+    implementation "com.squareup.retrofit2:retrofit:3.0.0"
+    implementation "com.squareup.retrofit2:converter-gson:3.0.0"
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.3.2'
+
+    implementation "com.google.dagger:dagger:2.57.2"
+    kapt "com.google.dagger:dagger-compiler:2.57.2"
+
+//    image zoom
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+/*Glide Image Loader*/
+    implementation 'com.github.bumptech.glide:glide:5.0.5'
+    kapt 'com.github.bumptech.glide:compiler:5.0.5'
+    annotationProcessor 'com.github.bumptech.glide:compiler:5.0.5'
+
+    implementation 'id.zelory:compressor:3.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-iid:21.1.0'
+    implementation 'com.google.firebase:firebase-messaging:25.0.1'
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'de.greenrobot:eventbus:3.0.0-beta1'
+
+
+    //calling
+    implementation 'com.github.ZEGOCLOUD:zego_uikit_plugin_adapter_android:3.0.5'
+    implementation 'com.github.ZEGOCLOUD:zego_uikit_signaling_plugin_android:3.0.1'
+    implementation 'com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+'
+
+
+    implementation 'com.razorpay:checkout:1.6.41'
+
+    //crop image upload
+    implementation 'com.github.yalantis:ucrop:2.2.8'
+
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'

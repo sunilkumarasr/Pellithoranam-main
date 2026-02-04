@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:paddingVertical="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_1sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/card_item_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivSavedGalleryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/heroin"
+            />
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_online_green"
+            android:lines="1"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_7sdp"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="gone"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_for_image_text">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:text="Belle Benson, 28"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="end"
+                android:visibility="invisible"
+                />
+            <RelativeLayout
+                android:layout_below="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="1.5 Km away"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tvDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:drawableTint="@color/white"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:layout_gravity="end"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="@dimen/_1sdp"
+                    android:layout_alignParentEnd="true"
+                    app:drawableStartCompat="@drawable/ic_delete_account" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+    <!--
+    </layout>-->
