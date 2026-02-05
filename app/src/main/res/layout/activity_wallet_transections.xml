@@ -17,7 +17,8 @@
         <LinearLayout
             android:id="@+id/llCustomToolBar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal">
             <RelativeLayout
                 android:layout_width="0dp"
@@ -25,14 +26,14 @@
                 android:layout_weight="1"
                 >
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_back_arrow"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:id="@+id/ivClose"
-                    />
+                    app:tint="@color/white"/>
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="0dp"

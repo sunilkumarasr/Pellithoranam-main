@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.stranger_sparks.view.activities.ui.activities.settings.SettingsViewModel" />
@@ -11,8 +12,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       >
+        android:layout_height="match_parent">
         <!-- <ImageView
            android:layout_width="match_parent"
            android:layout_height="match_parent"
@@ -24,12 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_app_background"
-            />
+            android:src="@drawable/ic_app_background" />
+
         <LinearLayout
             android:id="@+id/llCustomToolBar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
             <RelativeLayout
@@ -39,13 +40,12 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivClose"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_back_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_10sdp"
-
+                    android:src="@drawable/ic_back_arrow"
+                    app:tint="@color/white"
                     />
             </RelativeLayout>
 
@@ -63,14 +63,16 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_logout"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_below="@+id/llCustomToolBar">
+            android:layout_below="@+id/llCustomToolBar"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,6 +87,7 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="Settings"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_17sdp"
@@ -101,6 +104,7 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="Manage your settings here"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_14sdp" />
@@ -116,6 +120,7 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="Account"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp" />
@@ -128,13 +133,14 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:drawableStart="@drawable/ic_call"
-                    android:drawableTint="@color/colorPrimary"
                     android:drawablePadding="@dimen/_20sdp"
+                    android:drawableTint="@color/colorPrimary"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
                     android:text="Call History"
                     android:textColor="#4D6F87"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="@dimen/_16sdp"
+                    android:includeFontPadding="false"/>
 
                 <TextView
                     android:id="@+id/tvLikeLiked"
@@ -147,6 +153,7 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/likes_liked"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
@@ -164,6 +171,7 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="Notifications"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
@@ -181,6 +189,7 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/manage_subcription"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
@@ -198,11 +207,13 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/payments"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
+
                 <TextView
                     android:id="@+id/tvWallet"
                     android:layout_width="match_parent"
@@ -214,6 +225,7 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/menu_title_walet"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
@@ -233,8 +245,7 @@
                     android:text="@string/message_options"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -249,8 +260,7 @@
                     android:text="@string/manage_matches"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -265,50 +275,35 @@
                     android:text="@string/privacy_options"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone" />
 
-                <TextView
-                    android:id="@+id/tvSignOut"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:drawableStart="@drawable/ic_power_off"
-                    android:drawablePadding="@dimen/_20sdp"
-                    android:fontFamily="@font/mulish_regular"
-                    android:gravity="left|top"
-                    android:text="@string/sign_out"
-                    android:textColor="#4D6F87"
-                    android:textSize="@dimen/_16sdp"
 
-                    />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#DFD2F3"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"/>
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="#DFD2F3" />
 
                 <TextView
                     android:id="@+id/tvAboutUs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:drawableStart="@drawable/ic_safty"
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/about_us"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
+
                 <TextView
                     android:id="@+id/tvFaq"
                     android:layout_width="match_parent"
@@ -320,11 +315,13 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/faq"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
+
                 <TextView
                     android:id="@+id/tvHelp"
                     android:layout_width="match_parent"
@@ -336,11 +333,13 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/menu_title_help"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
+
                 <TextView
                     android:id="@+id/tvTerms_Constions"
                     android:layout_width="match_parent"
@@ -352,11 +351,13 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/terms_conditions"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
+
                 <TextView
                     android:id="@+id/tvPrivacy"
                     android:layout_width="match_parent"
@@ -368,12 +369,39 @@
                     android:drawablePadding="@dimen/_20sdp"
                     android:fontFamily="@font/mulish_regular"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="@string/privacy_policy"
                     android:textColor="#4D6F87"
                     android:textSize="@dimen/_16sdp"
 
                     />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="#DFD2F3" />
+
+                <TextView
+                    android:id="@+id/tvSignOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableStart="@drawable/ic_power_off"
+                    android:drawablePadding="@dimen/_20sdp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:text="@string/sign_out"
+                    android:textColor="#4D6F87"
+                    android:textSize="@dimen/_16sdp"
+
+                    />
 
 
             </LinearLayout>

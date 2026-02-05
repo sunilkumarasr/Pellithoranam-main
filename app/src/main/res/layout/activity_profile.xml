@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.stranger_sparks.view.activities.ui.activities.account.profile.ProfileViewModel" />
     </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,68 +28,48 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_app_background"
-            />
+            android:src="@drawable/ic_app_background" />
+
         <include
             android:id="@+id/progressLay"
-            layout="@layout/progress_layout"
-            />
-        <androidx.appcompat.widget.Toolbar
+            layout="@layout/progress_layout" />
+
+        <LinearLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivClose"
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_back_arrow"
-                    android:visibility="invisible"
-                    />
-
-                <TextView
-                    android:id="@+id/tv_toolbar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_weight="0.8"
-                    android:gravity="center_horizontal"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/white"
-                    />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_back_arrow"
+                app:tint="@color/white" />
 
 
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-
+        </LinearLayout>
 
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbar">
+
             <LinearLayout
                 android:id="@+id/llSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:paddingBottom="@dimen/_20sdp"
-                android:orientation="vertical"
-                >
+                android:paddingBottom="@dimen/_20sdp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -96,90 +78,92 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="@string/upload_profile"
                         android:gravity="center_horizontal"
-                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:text="@string/upload_profile"
                         android:textColor="@color/blue_text_color"
-                        android:layout_marginTop="20dp"/>
-
-
+                        android:textSize="17sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
-
 
 
                         <EditText
                             android:id="@+id/etFullName"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/full_name"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/full_name"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_family_name"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/family_name"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/family_name"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_father_name"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/father_name"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/father_name"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
 
@@ -187,50 +171,55 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_45sdp"
                         android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="start"
                         android:hint="@string/gender"
+                        android:includeFontPadding="false"
                         android:padding="@dimen/_15sdp"
                         android:textColor="#207ABF"
-                        android:fontFamily="@font/poppins_medium"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp"
-                        android:gravity="start"
                         tools:ignore="Autofill,TextFields" />
+
                     <RadioGroup
                         android:id="@+id/rgGender"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
-                        android:orientation="horizontal"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
-                        android:background="@drawable/edit_text_corner">
+                        android:background="@drawable/edit_text_corner"
+                        android:orientation="horizontal">
+
                         <RadioButton
                             android:id="@+id/rbMale"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="match_parent"
-                            android:text="@string/male"
-                            android:padding="16dp"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/radio_selecor"
-                            android:textColor="@color/radio_text_color"
-                            android:elevation="4dp"
                             android:layout_marginEnd="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_selecor"
+                            android:button="@android:color/transparent"
+                            android:elevation="4dp"
                             android:gravity="center"
-                            />
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/male"
+                            android:textColor="@color/radio_text_color" />
+
                         <RadioButton
                             android:id="@+id/rbFemale"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="match_parent"
-                            android:text="@string/female"
-                            android:padding="16dp"
                             android:layout_margin="0dp"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/radio_selecor"
-                            android:textColor="@color/radio_text_color"
-                            android:elevation="4dp"
                             android:layout_marginEnd="1dp"
-                            android:gravity="center"/>
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_selecor"
+                            android:button="@android:color/transparent"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/female"
+                            android:textColor="@color/radio_text_color" />
 
 
                     </RadioGroup>
@@ -242,29 +231,31 @@
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
                         <RadioButton
                             android:id="@+id/radioButtonSingle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="@dimen/_15sdp"
                             android:text="@string/single"
-                            android:textColor="#207ABF"/>
+                            android:textColor="#207ABF"
+                            android:textSize="@dimen/_15sdp" />
+
                         <RadioButton
                             android:id="@+id/radioButtonMarriage"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="@dimen/_15sdp"
                             android:text="@string/marriage"
-                            android:textColor="#207ABF"/>
+                            android:textColor="#207ABF"
+                            android:textSize="@dimen/_15sdp" />
                     </RadioGroup>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -274,22 +265,23 @@
                         <EditText
                             android:id="@+id/etStudy"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/hobbies"
-                            android:inputType="textCapSentences"
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/hobbies"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -299,21 +291,23 @@
                         <TextView
                             android:id="@+id/tvDOB"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/selecte_dob"
-                            android:inputType="textCapSentences"
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/selecte_dob"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -321,28 +315,28 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:maxLength="10"
                             android:id="@+id/etEmailId"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/phone_number"
-                            android:inputType="number"
                             android:ems="10"
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/phone_number"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -352,22 +346,23 @@
                         <EditText
                             android:id="@+id/etBirthstar"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/enter_birth_star"
-                            android:inputType="text"
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_birth_star"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -377,19 +372,19 @@
                         <Spinner
                             android:id="@+id/spHeight"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginRight="@dimen/_10sdp"
-                            android:padding="@dimen/_12sdp"
-                            android:hint="@string/height"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textSize="@dimen/_12sdp"/>
+                            android:hint="@string/height"
+                            android:includeFontPadding="false"
+                            android:textColor="#207ABF"
+                            android:textSize="@dimen/_11sdp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -399,68 +394,74 @@
                         <EditText
                             android:id="@+id/et_weight"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
+                            android:fontFamily="@font/poppins_medium"
                             android:hint="@string/weight"
+                            android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:padding="@dimen/_15sdp"
+                            android:padding="@dimen/_10sdp"
                             android:textColor="#207ABF"
-                            android:imeOptions="actionNext"
-                            android:fontFamily="@font/poppins_medium"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_profiession"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/profession"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/profession"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_education"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/education"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/education"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -469,73 +470,79 @@
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_company"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/company_name"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/company_name"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_position"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/working_position"
-                            android:inputType="textCapSentences"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/working_position"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_salary"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/salary_per_month"
-                            android:inputType="number"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/salary_per_month"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -545,52 +552,56 @@
                         <Spinner
                             android:id="@+id/spCaste"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginRight="@dimen/_10sdp"
-                            android:padding="@dimen/_12sdp"
-                            android:hint="@string/caste"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textSize="@dimen/_12sdp"/>
+                            android:hint="@string/caste"
+                            android:includeFontPadding="false"
+                            android:textColor="#207ABF"
+                            android:textSize="@dimen/_11sdp" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
+
                         <EditText
                             android:id="@+id/et_religion"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/religion"
-                            android:inputType="textCapSentences"
                             android:focusable="false"
                             android:focusableInTouchMode="false"
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:hint="@string/religion"
                             android:imeOptions="actionNext"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_22sdp"
                         android:text="(Hindu/Musilim/Cristian)"
                         android:textSize="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_22sdp"
 
                         />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
@@ -600,13 +611,12 @@
                         <Spinner
                             android:id="@+id/spLocation"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginRight="@dimen/_10sdp"
-                            android:padding="@dimen/_12sdp"
+                            android:fontFamily="@font/poppins_medium"
                             android:hint="@string/height"
                             android:textColor="#207ABF"
-                            android:fontFamily="@font/poppins_medium"
-                            android:textSize="@dimen/_12sdp"/>
+                            android:textSize="@dimen/_11sdp" />
 
                     </LinearLayout>
 
@@ -614,13 +624,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="start"
                         android:hint="@string/languages"
+                        android:includeFontPadding="false"
                         android:padding="@dimen/_15sdp"
                         android:textColor="#207ABF"
-                        android:fontFamily="@font/poppins_medium"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp"
-                        android:gravity="start"
                         tools:ignore="Autofill,TextFields" />
 
                     <LinearLayout
@@ -629,32 +640,33 @@
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:orientation="horizontal">
+
                         <CheckBox
                             android:id="@+id/checkBoxTelugu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="@dimen/_15sdp"
                             android:text="@string/telugu"
-                            android:textColor="@color/blue_text_color"/>
+                            android:textColor="@color/blue_text_color"
+                            android:textSize="@dimen/_15sdp" />
 
                         <CheckBox
                             android:id="@+id/checkBoxEnglish"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="@dimen/_15sdp"
                             android:text="@string/english"
-                            android:textColor="@color/blue_text_color"/>
+                            android:textColor="@color/blue_text_color"
+                            android:textSize="@dimen/_15sdp" />
 
                         <CheckBox
                             android:id="@+id/checkBoxHindi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="@dimen/_15sdp"
                             android:text="@string/hindi"
-                            android:textColor="@color/blue_text_color"/>
+                            android:textColor="@color/blue_text_color"
+                            android:textSize="@dimen/_15sdp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -666,25 +678,24 @@
                         android:background="@drawable/edit_text_corner"
                         android:orientation="horizontal">
 
-
-
                         <EditText
                             android:id="@+id/etBio"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/white"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="top|start"
                             android:hint="@string/bio"
+                            android:includeFontPadding="false"
                             android:inputType="textMultiLine"
                             android:lines="8"
-                            android:minLines="6"
-                            android:gravity="top|start"
                             android:maxLines="10"
+                            android:minLines="6"
+                            android:padding="@dimen/_10sdp"
                             android:scrollbars="vertical"
-                            android:padding="@dimen/_15sdp"
                             android:textColor="#207ABF"
-                            android:fontFamily="@font/poppins_medium"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
@@ -698,88 +709,86 @@
                         android:layout_marginEnd="@dimen/_15sdp"
                         android:background="@drawable/edit_doted_text_corner"
                         android:orientation="vertical">
+
                         <ImageView
                             android:id="@+id/ivProfilePicture"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_upload_icon"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="1dp"/>
-
-
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_upload_icon" />
 
                         <TextView
                             android:id="@+id/tvFileName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/white"
-                            android:hint="@string/upload_picture"
-
-                            android:padding="@dimen/_15sdp"
-                            android:textColor="#207ABF"
                             android:fontFamily="@font/poppins_medium"
-                            android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
                             android:gravity="center_horizontal"
+                            android:hint="@string/upload_picture"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="#207ABF"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
 
                     </LinearLayout>
 
 
-
                     <LinearLayout
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
+                        android:orientation="horizontal">
+
                         <CheckBox
                             android:id="@+id/check_terms"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/blue_text_color"/>
+                            android:textColor="@color/blue_text_color" />
+
                         <TextView
                             android:id="@+id/txt_terms"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/white"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="start"
                             android:hint="@string/read_terms_conditions"
+                            android:includeFontPadding="false"
                             android:padding="@dimen/_5sdp"
                             android:textColor="#207ABF"
-                            android:fontFamily="@font/poppins_medium"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12sdp"
-                            android:gravity="start"
+                            android:textSize="@dimen/_11sdp"
                             tools:ignore="Autofill,TextFields" />
                     </LinearLayout>
 
 
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
-                        android:orientation="horizontal"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_30sdp">
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:orientation="horizontal">
 
                         <Button
-                            android:layout_gravity="center_vertical"
                             android:id="@+id/btnContinue"
                             android:layout_width="0dp"
-                            android:layout_weight="0.7"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btn_curved_blue_gradiant"
-                            android:text="@string/continue_tag"
-                            android:textSize="@dimen/_14sdp"
-                            android:textColor="@android:color/white"
+                            android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_20sdp"
                             android:layout_marginEnd="@dimen/_20sdp"
-                            android:fontFamily="@font/poppins_medium"/>
+                            android:layout_weight="0.7"
+                            android:background="@drawable/btn_curved_blue_gradiant"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/continue_tag"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_14sdp" />
 
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.stranger_sparks.R
 import com.stranger_sparks.StrangerSparksApplication
@@ -47,6 +48,11 @@ class MyAccount : AppCompatActivity(), OnItemClickListenerProfiles {
         binding = ActivityMyAccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        ConstantUtils.changeNotificationBarColor(
+            this,
+            ContextCompat.getColor(this, R.color.colorPrimary),
+            false
+        )
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 

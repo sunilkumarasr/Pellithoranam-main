@@ -1,78 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.stranger_sparks.view.activities.ui.activities.account.AccountViewModel" />
     </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_app_background"
-            />
+            android:src="@drawable/ic_app_background" />
 
         <include
             android:id="@+id/progressLay"
-            layout="@layout/progress_layout"
-            />
+            layout="@layout/progress_layout" />
 
         <LinearLayout
             android:id="@+id/llCustomToolBar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_back_arrow"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:id="@+id/ivClose"
-                    />
-            </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_back_arrow"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivLogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="fitStart"
-                    android:src="@drawable/ic_logout"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:visibility="gone"
-                    />
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_logout"
+                    android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/llCustomToolBar">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
 
                 >
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -81,58 +86,42 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:text="Account"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_17sdp"
-
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="left|top"
-                    android:text=""
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_14sdp"
-                    />
-
+                    android:textSize="@dimen/_17sdp" />
 
                 <Button
-                    android:layout_gravity="center_vertical"
                     android:id="@+id/btnProfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_curved_orange_gradiant"
-                    android:text="@string/profile"
-                    android:textSize="@dimen/_14sdp"
-                    android:textColor="@android:color/white"
-                    android:layout_marginStart="@dimen/_40sdp"
-                    android:layout_marginEnd="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:fontFamily="@font/mulish_regular"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-                <Button
                     android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/btn_curved_orange_gradiant"
+                    android:fontFamily="@font/mulish_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <Button
                     android:id="@+id/btnGallery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_curved_orange_gradiant"
-                    android:text="@string/gallery"
-                    android:textSize="@dimen/_14sdp"
-                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="@dimen/_40sdp"
-                    android:layout_marginEnd="@dimen/_40sdp"
                     android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/btn_curved_orange_gradiant"
                     android:fontFamily="@font/mulish_regular"
-                    android:layout_marginBottom="@dimen/_20sdp"/>
-
-
-
-
-
+                    android:includeFontPadding="false"
+                    android:text="@string/gallery"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_14sdp" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

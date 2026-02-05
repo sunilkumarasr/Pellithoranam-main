@@ -29,7 +29,7 @@ class WebViewUrlLoad : AppCompatActivity() {
         supportActionBar?.hide()
         ConstantUtils.changeNotificationBarColor(
             this,
-            ContextCompat.getColor(this, R.color.notification_bar_color_two),
+            ContextCompat.getColor(this, R.color.colorPrimary),
             false
         )
         binding.viewModel = viewModel

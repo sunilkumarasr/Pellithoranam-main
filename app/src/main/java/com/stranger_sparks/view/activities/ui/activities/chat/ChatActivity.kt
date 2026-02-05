@@ -32,7 +32,7 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.black), false)
+        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.colorPrimary), false)
 
         val viewModel: ChatViewModel =
             ViewModelProvider(this).get(ChatViewModel::class.java);

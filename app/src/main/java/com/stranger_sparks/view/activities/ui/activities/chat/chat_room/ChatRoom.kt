@@ -73,9 +73,10 @@ class ChatRoom : AppCompatActivity(), OnItemClickListenerChatRoom {
         supportActionBar?.hide()
         ConstantUtils.changeNotificationBarColor(
             this,
-            ContextCompat.getColor(this, R.color.notification_bar_color_two),
+            ContextCompat.getColor(this, R.color.colorPrimary),
             false
         )
+
         profile_id = intent.extras?.getString("PROFILE_ID").toString()
         is_chart = intent.getBooleanExtra("is_chart", false)
 

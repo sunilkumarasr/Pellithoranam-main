@@ -16,7 +16,8 @@
         <LinearLayout
             android:id="@+id/llCustomToolBar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimary"
             android:orientation="horizontal">
             <RelativeLayout
                 android:layout_width="0dp"
@@ -24,9 +25,10 @@
                 android:layout_weight="1"
                 >
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="fitStart"
+                    app:tint="@color/white"
                     android:src="@drawable/ic_back_arrow"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_10sdp"
@@ -110,6 +112,7 @@
                         android:inputType="number"
                         android:maxLength="10"
                         android:padding="@dimen/_15sdp"
+                        android:includeFontPadding="false"
                         android:textColor="#207ABF"
                         android:fontFamily="@font/poppins_medium"
                         android:textCursorDrawable="@null"
@@ -127,6 +130,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
                     android:gravity="center_vertical"
                     android:text="New Matches"
                     android:textColor="@color/colorPrimary"
@@ -153,6 +157,7 @@
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
+                    android:includeFontPadding="false"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center_vertical"
                     android:text="All Message"

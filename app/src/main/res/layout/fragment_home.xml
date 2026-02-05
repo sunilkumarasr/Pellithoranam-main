@@ -39,7 +39,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_15sdp"
-
                     android:layout_marginEnd="@dimen/_15sdp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
@@ -53,13 +52,14 @@
                         android:layout_marginLeft="@dimen/_15sdp"
                         android:layout_marginRight="@dimen/_15sdp"
                         android:layout_weight="0.2"
-                        android:maxLines="1"
-                        android:drawableLeft="@drawable/ic_search"
-                        android:hint="@string/search_for_profile"
-                        android:drawableTint="@color/grey"
-                        android:drawablePadding="@dimen/_8sdp"
                         android:background="@android:color/transparent"
-                        android:textSize="@dimen/_12sdp"/>
+                        android:includeFontPadding="false"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:drawableTint="@color/grey"
+                        android:hint="@string/search_for_profile"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_12sdp" />
 
                     <Button
                         android:id="@+id/btnSearchCitySubmit"

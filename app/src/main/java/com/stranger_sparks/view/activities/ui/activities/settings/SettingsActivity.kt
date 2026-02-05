@@ -48,7 +48,7 @@ class SettingsActivity : AppCompatActivity() {
         supportActionBar?.hide()
         ConstantUtils.changeNotificationBarColor(
             this,
-            ContextCompat.getColor(this, R.color.black),
+            ContextCompat.getColor(this, R.color.colorPrimary),
             false
         )
 
@@ -77,12 +77,6 @@ class SettingsActivity : AppCompatActivity() {
                 "Yes",
                 DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
                     viewModel.logoutLiveData(userID)
-                    /*if(SharedPreferenceManager(this).clearAllData()){
-                        Intent(applicationContext, SignInSignUpActivity::class.java).also {
-                            startActivity(it)
-                            finish()
-                        }
-                    }*/
                 } as DialogInterface.OnClickListener)
             builder.setNegativeButton(
                 "No",
@@ -176,9 +170,7 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         binding.tvManageSubscription.setOnClickListener {
-//            Intent(applicationContext, ManageSubscription::class.java).also {
-//                startActivity(it)
-//            }
+
             Intent(applicationContext, ManageSubscriptionNew::class.java).also {
                 startActivity(it)
             }

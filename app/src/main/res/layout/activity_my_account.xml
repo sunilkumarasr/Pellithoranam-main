@@ -30,7 +30,8 @@
     <LinearLayout
         android:id="@+id/llCustomToolBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
         <RelativeLayout
             android:layout_width="0dp"
@@ -39,13 +40,13 @@
             >
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivClose"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:scaleType="fitStart"
                 android:src="@drawable/ic_back_arrow"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_10sdp"
-
+                app:tint="@color/white"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -99,6 +100,7 @@
                         android:layout_marginRight="@dimen/_15sdp"
                         android:layout_weight="0.2"
                         android:maxLines="1"
+                        android:includeFontPadding="false"
                         android:drawableLeft="@drawable/ic_search"
                         android:hint="@string/search_for_profile"
                         android:drawableTint="@color/grey"
@@ -112,6 +114,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="@dimen/_15sdp"
+                        android:includeFontPadding="false"
                         android:drawableLeft="@drawable/ic_search"
                         android:background="@drawable/right_corner"
                         android:textColor="@color/white"
@@ -137,6 +140,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_15sdp"
+                android:includeFontPadding="false"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_horizontal"
                 android:visibility="gone"

@@ -23,7 +23,8 @@
             <LinearLayout
                 android:id="@+id/llCustomToolBar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/colorPrimary"
                 android:orientation="horizontal">
 
                 <RelativeLayout
@@ -33,11 +34,11 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/ivClose"
-                        android:layout_width="33dp"
-                        android:layout_height="33dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_10sdp"
-
+                        app:tint="@color/white"
                         android:scaleType="fitStart"
                         android:src="@drawable/ic_back_arrow" />
                     <!--android:onClick="@{()->viewModel.closeWallet()}"-->
@@ -92,7 +93,7 @@
                             android:text="My Wallet"
                             android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/_17sdp"
-
+                            android:includeFontPadding="false"
                             />
 
                         <TextView
@@ -107,7 +108,8 @@
                             android:gravity="left|top"
                             android:text="Active"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/_14sdp" />
+                            android:textSize="@dimen/_14sdp"
+                            android:includeFontPadding="false"/>
                     </LinearLayout>
 
                     <com.mikhaellopez.circularimageview.CircularImageView
@@ -151,7 +153,8 @@
                             android:fontFamily="@font/poppins_medium"
                             android:gravity="left|top"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_20sdp" />
+                            android:textSize="@dimen/_20sdp"
+                            android:includeFontPadding="false"/>
 
                         <TextView
 
@@ -165,7 +168,8 @@
                             android:gravity="left|top"
                             android:text="My Balance"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_16sdp" />
+                            android:textSize="@dimen/_16sdp"
+                            android:includeFontPadding="false"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -185,7 +189,7 @@
                             android:paddingTop="@dimen/_10sdp"
                             android:paddingBottom="@dimen/_10sdp"
                             android:text="Add"
-
+                            android:includeFontPadding="false"
                             />
                         <!--android:onClick="@{()-> viewModel.openAddAmount()}"-->
                     </LinearLayout>
@@ -210,7 +214,7 @@
                         android:text="@string/transactions"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-
+                        android:includeFontPadding="false"
                         />
                     <!-- android:onClick="@{()-> viewModel.showTransactions()}"-->
                     <androidx.appcompat.widget.AppCompatButton
@@ -225,7 +229,8 @@
                         android:text="@string/withdraw"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:visibility="visible" />
+                        android:visibility="visible"
+                        android:includeFontPadding="false"/>
                     <!--android:onClick="@{() -> viewModel.openWithdraw()}"-->
                 </LinearLayout>
 
@@ -259,6 +264,7 @@
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="left|top"
                     android:padding="@dimen/_10sdp"
+                    android:includeFontPadding="false"
                     android:text="Add to Your Balance"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_17sdp" />
@@ -271,6 +277,7 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="left|top"
                     android:padding="@dimen/_10sdp"
+                    android:includeFontPadding="false"
                     android:text="Enter the amount and top up your balance in no time."
                     android:textColor="#767676"
                     android:textSize="@dimen/_14sdp" />
@@ -295,6 +302,7 @@
                         android:inputType="number"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
+                        android:includeFontPadding="false"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp" />
 
@@ -321,6 +329,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="Screenshot"
                         android:imeOptions="actionDone"
+                        android:includeFontPadding="false"
                         android:inputType="number"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
@@ -351,7 +360,7 @@
                         android:hint="Transaction ID"
                         android:imeOptions="actionDone"
                         android:padding="@dimen/_10sdp"
-
+                        android:includeFontPadding="false"
                         android:textColor="#207ABF"
                         android:textSize="@dimen/_12sdp"
 
@@ -381,6 +390,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="500"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -397,6 +407,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="1000"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -413,6 +424,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="5000"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -431,6 +443,7 @@
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/continue_tag"
                     android:textAllCaps="false"
+                    android:includeFontPadding="false"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/_14sdp" />
 
@@ -469,6 +482,7 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:padding="@dimen/_10sdp"
                     android:text="Request a Payout"
                     android:textColor="@color/colorPrimary"
@@ -481,6 +495,7 @@
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:fontFamily="@font/poppins"
                     android:gravity="left|top"
+                    android:includeFontPadding="false"
                     android:padding="@dimen/_10sdp"
                     android:text="Enter the amount you wish to withdraw and confirm your request."
                     android:textColor="#767676"
@@ -505,6 +520,7 @@
                         android:inputType="number"
                         android:maxLength="15"
                         android:padding="@dimen/_10sdp"
+                        android:includeFontPadding="false"
                         android:textColor="#207ABF"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp" />
@@ -529,6 +545,7 @@
                         android:inputType="number"
                         android:maxLength="15"
                         android:padding="@dimen/_10sdp"
+                        android:includeFontPadding="false"
                         android:textColor="#207ABF"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp"
@@ -551,6 +568,7 @@
                         android:backgroundTint="@color/white"
                         android:fontFamily="@font/poppins"
                         android:hint="@string/bank_name"
+                        android:includeFontPadding="false"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
                         android:textCursorDrawable="@null"
@@ -576,6 +594,7 @@
                         android:hint="@string/branch"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
+                        android:includeFontPadding="false"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp"
                         tools:ignore="Autofill,TextFields" />
@@ -601,6 +620,7 @@
                         android:maxLength="12"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
+                        android:includeFontPadding="false"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp"
                         tools:ignore="Autofill,TextFields" />
@@ -623,6 +643,7 @@
                         android:fontFamily="@font/poppins"
                         android:hint="PhonePay Number"
                         android:imeOptions="actionNext"
+                        android:includeFontPadding="false"
                         android:inputType="number"
                         android:maxLength="10"
                         android:padding="@dimen/_10sdp"
@@ -639,6 +660,7 @@
                     android:fontFamily="@font/poppins"
                     android:gravity="center"
                     android:text="OR"
+                    android:includeFontPadding="false"
                     android:textColor="#767676"
                     android:textSize="@dimen/_14sdp" />
 
@@ -657,6 +679,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
                         android:fontFamily="@font/poppins"
+                        android:includeFontPadding="false"
                         android:hint="GPay Number"
                         android:imeOptions="actionNext"
                         android:inputType="number"
@@ -685,6 +708,7 @@
                         android:fontFamily="@font/poppins"
                         android:imeOptions="actionDone"
                         android:inputType="number"
+                        android:includeFontPadding="false"
                         android:maxLength="10"
                         android:padding="@dimen/_10sdp"
                         android:textColor="#207ABF"
@@ -714,6 +738,7 @@
                         android:paddingStart="@dimen/_10sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
+                        android:includeFontPadding="false"
                         android:text="500"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
@@ -731,6 +756,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="1000"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -747,6 +773,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="5000"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -763,6 +790,7 @@
                         android:paddingLeft="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
                         android:text="10000"
+                        android:includeFontPadding="false"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12sdp" />
@@ -788,6 +816,7 @@
                         android:hint="@string/reason"
                         android:inputType="textCapSentences"
                         android:padding="@dimen/_10sdp"
+                        android:includeFontPadding="false"
                         android:textColor="#207ABF"
                         android:textCursorDrawable="@null"
                         android:textSize="@dimen/_12sdp" />
@@ -805,6 +834,7 @@
                     android:background="@drawable/btn_curved_blue_gradiant"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/submit"
+                    android:includeFontPadding="false"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/_14sdp" />

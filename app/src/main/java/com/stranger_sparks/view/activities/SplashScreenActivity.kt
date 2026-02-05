@@ -29,7 +29,6 @@ import com.stranger_sparks.viewmodel.SplashViewModel
 import com.tencent.mmkv.MMKV
 import com.zegocloud.uikit.ZegoUIKit
 import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallService
-
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -43,7 +42,6 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         viewModel = ViewModelProvider(this)[SplashViewModel::class.java]
         binding.viewModel = viewModel

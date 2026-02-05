@@ -8,6 +8,7 @@ import android.media.AudioAttributes
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatDelegate
 import com.stranger_sparks.api_dragger_flow.di.ApplicationComponent
 import com.stranger_sparks.api_dragger_flow.di.DaggerApplicationComponent
 
@@ -17,6 +18,12 @@ class StrangerSparksApplication: Application() {
     lateinit var applicationComponent : ApplicationComponent
     override fun onCreate() {
         super.onCreate()
+
+        //Dark Mode off
+        AppCompatDelegate.setDefaultNightMode(
+            AppCompatDelegate.MODE_NIGHT_NO
+        )
+
         applicationComponent = DaggerApplicationComponent.builder().build()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             setupNotificationChannels(this);

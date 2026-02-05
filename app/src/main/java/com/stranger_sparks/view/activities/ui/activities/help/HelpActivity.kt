@@ -38,7 +38,7 @@ class HelpActivity : AppCompatActivity() {
         binding = ActivityHelpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.black), false)
+        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.colorPrimary), false)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
         viewModel.inputSignal.observe(this) {

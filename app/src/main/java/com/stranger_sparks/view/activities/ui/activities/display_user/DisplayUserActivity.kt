@@ -148,7 +148,6 @@ class DisplayUserActivity : AppCompatActivity(), OnItemClickListenerProfilesGall
 
         /*if(userData != null){
             binding.tvName.text = userData!!.name
-            binding.tvContent.text = userData!!.description
             binding.tvEmail.text = userData!!.email
             binding.tvHeight.text = userData!!.height
             binding.tvMobile.text = userData!!.phone

@@ -44,7 +44,7 @@ class Notifications : AppCompatActivity() {
         binding = ActivityNotifications2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.black), false)
+        ConstantUtils.changeNotificationBarColor(this, ContextCompat.getColor(this, R.color.colorPrimary), false)
 
         val sharedPreferenceManager = SharedPreferenceManager(this)
         userID = sharedPreferenceManager.getSavedLoginResponseUser()?.data?.id.toString()

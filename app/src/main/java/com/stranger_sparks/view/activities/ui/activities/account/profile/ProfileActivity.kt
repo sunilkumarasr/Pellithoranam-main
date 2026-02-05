@@ -106,7 +106,7 @@ class ProfileActivity : AppCompatActivity() {
         supportActionBar?.hide()
         ConstantUtils.changeNotificationBarColor(
             this,
-            ContextCompat.getColor(this, R.color.black),
+            ContextCompat.getColor(this, R.color.colorPrimary),
             false
         )
         binding.viewModel = viewModel
